@@ -1,0 +1,4 @@
+- 👋 Hi, I’m Diego Cervantes
+- 👀 I’m interested in websites, apps, videogames, boardgames
+- 🌱 I’m currently learning react js, serverless functions, cms
+- 📫 How to reach me mail to diegocerzel@gmail.com
