@@ -1,0 +1,242 @@
+/* Menu, everithing that its related to it */
+
+/* 1.- Menu (container and position fixed)*/
+/* 2.- Menu desktop (container) */
+/* 3.- Menu desktop list (links) */
+/* 4.- Menu mobile (hamburger menu container) */
+/* 5.- Menu mobileactive list (links for mobile) */
+/* 6.- Effect of the X and hamburger menu specifications */
+/* 7.- Media queries for the menu */
+/* 8.- Important classes */
+
+* {
+  box-sizing: border-box;
+}
+
+/* 1.- This one is the div "container" of the desktop menu and the links, the one with position fixed */
+.menu {
+  display: flex;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 999;
+  background-color: #ffffff;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 15px 50px;
+  height: 80px;
+  background-image: url("../images/fondo_papel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+}
+
+/* 2.- div "container" of the links on desktop */
+.links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 3.- List of the desktop menu, links */
+.links ul {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links li {
+  display: inline-block;
+  margin: 0px 15px 0px 0px;
+}
+.links li a {
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.links li:last-child {
+  margin-right: 0px;
+}
+/*Logo wrapper*/
+.logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  z-index: 999;
+}
+.logo-wrapper a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo,
+.logo-wrapper a {
+  width: 100%;
+  max-width: 100%;
+}
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.divisor {
+  width: 3px;
+  margin-right: 15px;
+}
+.divisor img {
+  width: 100%;
+  height: 25px;
+}
+
+/* Menu for mobile */
+
+/* 4.- div "container" of the hamburger menu for mobile, with background color */
+.menumobile {
+  width: auto;
+  height: auto;
+  z-index: 1;
+}
+
+/* 5.- class that is added to the desktop menu for changing to mobile */
+.menumobileactive {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-image: url("../images/fondo_papel.png");
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menumobileactive ul {
+  width: 100%;
+  position: relative;
+  bottom: 3px;
+  margin: 0px;
+  flex-direction: column;
+}
+.menumobileactive li {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 15px !important;
+}
+
+.menumobileactive a:hover {
+  color: red;
+}
+/* 6.- hamburger menu and effect of the x */
+button {
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  height: 31px;
+}
+.line {
+  position: relative;
+  height: 2px;
+  width: 50px;
+  background: #000000;
+  -webkit-transition: 0.2s all ease;
+  -moz-transition: 0.2s all ease;
+  -ms-transition: 0.2s all ease;
+  -o-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+.menu-on .line-m,
+.menu-on:hover .line-m {
+  background: rgba(0, 0, 0, 0);
+}
+.menu-on .line {
+  top: 0px;
+}
+.menu-on .line-t {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 14px;
+}
+.menu-on .line-b {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: -15px;
+}
+
+/* 7.- When the screen is higher than 800px */
+/* 1.-Menu mobile the "container" div is display as none, non visible*/
+/* 2.-links the "container" div of the links is displayed as inlneblock, visible*/
+@media screen and (min-width: 800px) {
+  .menumobile {
+    display: none;
+  }
+}
+
+/* When the screen is less than 800px */
+/* 1.-Menu mobile the "container" div is display as inline-block, visible */
+/* 2.-links the "container" div of the links is displayed as none, non visible */
+@media screen and (max-width: 800px) {
+  .menu .divisor {
+    display: none;
+  }
+  .links {
+    display: none;
+  }
+  .menu {
+    padding: 0px 30px;
+    align-items: center;
+    position: fixed !important;
+  }
+  .mapa-white {
+    display: none;
+  }
+}
+
+/* 8.- Important classes */
+.show {
+  display: inherit;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.hide {
+  display: none;
+}
+.invisible {
+  opacity: 0;
+  overflow: hidden;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.overflowhidden {
+  overflow: hidden;
+}
+/* Active menu link*/
+.on {
+  text-decoration: underline !important;
+}

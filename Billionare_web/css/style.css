@@ -1,0 +1,587 @@
+/*
+CSS structure and order of classes
+    1.- FontFace
+    2.- Basic and nedded classes
+    3.- Tipography and fontfaces for the document
+    4.- lists
+    5.- utilities
+    6.- images
+    7.- Important and specific classes, unique for the proyect and elements
+    8.- Basic classes with margin & padding
+    9.- Media query
+*/
+
+/* 1.- FontFace*/
+
+/* 2.- Basic and needed classes */
+
+body {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* 2.5 Sections */
+/*?Hero*/
+#home {
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  background-image: url("../images/hero/fondo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 0px 40px 0px;
+  overflow: hidden;
+}
+.home-content {
+  padding: 0px 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content .left {
+  width: 18%;
+}
+.home-content .center {
+  width: 58%;
+}
+.home-content .right {
+  width: 24%;
+}
+#home img {
+  width: 100%;
+}
+.smells-img {
+  margin: 14px 0px;
+  display: block;
+}
+.duende-hero {
+  position: relative;
+  top: 50px;
+  width: 90% !important;
+}
+@media (max-width: 550px) {
+  .home-content {
+    padding: 0px 30px;
+    flex-wrap: wrap;
+  }
+  .home-content .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .home-content .center {
+    width: 65%;
+  }
+  .home-content .right {
+    width: 35%;
+  }
+  .duende-hero {
+    width: 30% !important;
+    top: 0px;
+  }
+}
+/*?--------------------------------------------*/
+/*?About Us*/
+#about-us {
+  background-image: url("../images/fondo2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  background-color: #282828;
+  overflow: hidden;
+}
+#about-us .left,
+#about-us .right {
+  width: 50%;
+}
+#about-us .left {
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.diez-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.diez-wrapper .half {
+  width: 50%;
+  display: flex;
+}
+.diez-wrapper div img {
+  width: 100%;
+}
+.diez-wrapper .carac {
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25px;
+}
+
+.billetes-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  margin-bottom: 50px;
+}
+.billetes-wrapper .never {
+  width: 50%;
+}
+.billetes-wrapper .billetes {
+  width: 25%;
+  position: relative;
+}
+.dunde-slide {
+  width: 100%;
+  padding: 50px;
+}
+
+@media (max-width: 550px) {
+  #about-us {
+    flex-direction: column;
+  }
+  #about-us .left,
+  #about-us .right {
+    width: 100%;
+  }
+  #about-us .left {
+    padding: 30px;
+  }
+  .dunde-slide {
+    padding: 30px 50px;
+  }
+}
+
+/* Billetes -------------------*/
+.billete {
+  position: absolute;
+}
+.azul-1 {
+  height: 60%;
+  left: 0px;
+  top: 0%;
+}
+.rojo-1 {
+  height: 50%;
+  left: 0px;
+  bottom: -10%;
+}
+.morado-1 {
+  height: 40%;
+  left: 60px;
+  top: -10%;
+}
+.verde-1 {
+  height: 40%;
+  bottom: -20%;
+  left: 40%;
+}
+.naranja-1 {
+  height: 40%;
+  right: 10px;
+  top: 40%;
+}
+
+/*2------*/
+.rojo-2 {
+  height: 40%;
+  top: -10%;
+  left: 5%;
+}
+.naranja-2 {
+  height: 30%;
+  bottom: 0%;
+  left: 5%;
+}
+.azul-2 {
+  height: 50%;
+  left: 20%;
+  top: 20%;
+}
+.verde-2 {
+  height: 50%;
+  right: 0%;
+  top: -10%;
+}
+.morado-2 {
+  right: 10%;
+  height: 50%;
+  bottom: -10%;
+}
+
+/*?--------------------------------------------*/
+/*?Products*/
+#products {
+  background-image: url("../images/fondo3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+  color: white !important;
+  overflow: hidden;
+}
+.dark-back {
+  background-color: #282828;
+}
+.sabores {
+  width: 60%;
+  box-sizing: border-box;
+  position: relative;
+}
+.slider img {
+  width: 100%;
+}
+.arrow-right {
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  width: 20px;
+  height: auto;
+  z-index: 999;
+  cursor: pointer;
+}
+.arrow-left {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  width: 20px;
+  height: auto;
+  z-index: 999;
+  cursor: pointer;
+}
+.arrow-right1 {
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  width: 20px;
+  height: auto;
+  z-index: 999;
+  cursor: pointer;
+}
+.arrow-left1 {
+  position: absolute;
+  top: 45%;
+  left: 10px;
+  width: 20px;
+  height: auto;
+  z-index: 999;
+  cursor: pointer;
+}
+.sabores img {
+  width: 100%;
+}
+.caracter {
+  width: 40%;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 50px;
+}
+.table {
+  width: 100%;
+  box-sizing: border-box;
+}
+.table .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row1 {
+  width: auto;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.row2 {
+  width: auto;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.row .icon {
+  max-width: 60px;
+}
+.icon img {
+  width: 100%;
+}
+.article {
+  text-align: left;
+}
+
+@media (max-width: 550px) {
+  #products {
+    flex-direction: column;
+    height: auto !important;
+  }
+  .sabores {
+    width: 100%;
+  }
+  .caracter {
+    width: 100%;
+    padding: 30px;
+  }
+}
+/*?--------------------------------------------*/
+/*?Contact*/
+#contact {
+  background-image: url("../images/fondo4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.bill-icon {
+  width: 60%;
+  padding: 30px 70px;
+  box-sizing: border-box;
+  display: flex;
+}
+.form-wrapper {
+  width: 40%;
+  padding: 30px;
+  color: white;
+}
+.bill-icon img {
+  width: 100%;
+}
+form {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(50, 115, 220, 0) !important;
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(
+    to bottom right,
+    #750dfa 0%,
+    #0f56f3 25%,
+    #6cce1e 50%,
+    #f4892a 75%,
+    #fa1100 100%
+  ) !important;
+  border-image-slice: 1 !important;
+  height: auto !important;
+}
+form textarea {
+  width: 100%;
+  resize: none;
+  background-color: rgba(50, 115, 220, 0) !important;
+  border: 2px solid transparent !important;
+  border-image: linear-gradient(
+    to bottom right,
+    #750dfa 0%,
+    #0f56f3 25%,
+    #6cce1e 50%,
+    #f4892a 75%,
+    #fa1100 100%
+  ) !important;
+  border-image-slice: 1 !important;
+  height: 140px !important;
+}
+
+@media (max-width: 550px) {
+  #contact {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .bill-icon {
+    width: 100%;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  form input,
+  form textarea {
+    border: 2px solid white !important;
+  }
+}
+
+/*?--------------------------------------------*/
+/*?Footer*/
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../images/fondo_papel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px 50px;
+  overflow: hidden;
+}
+footer div {
+  width: 33%;
+}
+.creador {
+  text-align: center;
+}
+.redes {
+  display: flex;
+  align-items: center;
+}
+.redes img {
+  height: 40px;
+  cursor: pointer;
+}
+.redes img:first-child {
+  margin-right: 70px;
+}
+.back {
+  text-align: right;
+}
+.back img {
+  height: 35px;
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  footer {
+    padding: 10px 20px 40px 20px;
+  }
+  .redes img:first-child {
+    margin-right: 20px;
+  }
+  .redes img {
+    height: 35px;
+  }
+  .back img {
+    height: 30px;
+  }
+}
+
+/*?--------------------------------------------*/
+/*?Lineas*/
+.never-wrapper {
+  position: relative;
+}
+.never-wrapper img {
+  width: 100% !important;
+}
+.linea1 {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0px;
+}
+.linea1 img {
+  width: 100%;
+}
+
+.specs-wrapper {
+  position: relative;
+}
+.linea-2 {
+  width: 60%;
+  position: absolute;
+  bottom: -0px;
+  left: 0px;
+}
+
+/*Tabla*/
+.line6 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+.line7 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line8 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+.line9 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+
+/*Contact*/
+.cont-title-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.cont-title-wrapper img {
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+}
+
+.flavors {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.experiences {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.times {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.flavors img {
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  width: 60% !important;
+}
+.experiences img {
+  position: relative;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  width: 80% !important;
+}
+.times img {
+  position: relative;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  width: 100% !important;
+}
